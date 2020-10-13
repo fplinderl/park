@@ -4,7 +4,6 @@ $(function () {
         console.log(msg.msg)
     });
     socket.on('vitriread', (msg) => {
-        socket1.emit('vitri', msg)
         console.log(msg)
         for (var i = 0; i < msg.message.length; i++) {
           var a = "#p" + (i + 1)
