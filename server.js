@@ -8,7 +8,6 @@ app.use('/public',express.static(path.join(__dirname,'public')))
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'home.html'));
 });
-http.listen(process.env.PORT||3000, () => {});
 app.get('/api/api/api',(req,res)=>{
     res.json(ip.address()+':'+process.env.PORT)
 })
@@ -17,4 +16,5 @@ io.on('connection', (socket) => {
     socket.on('vitri',msg=>{
         socket.broadcast.emit('vitriread', msg);
     })
-  });
+});
+http.listen(process.env.PORT||3000, () => {});
