@@ -22,7 +22,7 @@ $(function () {
   })
   .then(data=>{
     if(data!="loi getall roi"){
-      for (const ele of data){$("#list").append(`<li><img src="${ele.image}" alt="">${ele.rfid},,,,,,,,,,,,,${ele.carPlate}</li>`)}
+      for (const ele of data){$("#list").append(`<li><img src="/public/${ele.image}" alt="">${ele.rfid},,,,,,,,,,,,,${ele.carPlate}</li>`)}
       
     }
   })
