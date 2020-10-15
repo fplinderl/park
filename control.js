@@ -3,11 +3,11 @@ const path = require("path")
 const fs = require("fs")
 var image = function (req, res, next) {
   var oldname = path.join(__dirname, "./public/" + req.file.filename);
-  var newname = path.join(__dirname, "./public/" + "abc");
+  var newname = path.join(__dirname, "./public/" + req.file.originalname);
   fs.rename(oldname, newname, (err) => {
     if (err) console.log(err);
   });
-  res.json("/public/" + "abc");
+  res.json("/public/" + req.file.originalname);
 }
 var getall = function(req,res){
   CarModel.find({})
