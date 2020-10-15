@@ -16,3 +16,13 @@ $(function () {
         }
       });
   });
+  $.ajax({
+    url:"/api/getall",
+    type:"get"
+  })
+  .then(data=>{
+    if(data!="loi getall roi"){
+      for (const ele of data){$("#list").append(`<li><img src="${ele.image}" alt="">${ele.rfid},,,,,,,,,,,,,${ele.carPlate}</li>`)}
+      
+    }
+  })

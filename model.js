@@ -12,6 +12,7 @@ const carschema = new Schema(
     rfid: String,
     carPlate: String,
     carIn: String,
+    image:String
   },
   {
     collection: "Car",

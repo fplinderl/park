@@ -1,6 +1,7 @@
 const express = require("express")
 var ip = require('ip');
 const path = require("path")
+const control = require("./control");
 const multer = require("multer");
 var app = require('express')();
 var http = require('http').createServer(app);
@@ -10,9 +11,7 @@ app.use('/public',express.static(path.join(__dirname,'public')))
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'home.html'));
 });
-app.get('/api/api/api',(req,res)=>{
-    res.json(ip.address()+':'+process.env.PORT)
-})
+app.get('/api/getall',control.getall)
 app.post("/api/uploadimage", upload.single("file"), control.image);
 io.on('connection', (socket) => {
     io.emit('connected', {"msg":"connected"});
