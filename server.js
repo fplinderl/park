@@ -7,6 +7,11 @@ var app = require('express')();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 const upload = multer({ dest: "public" });
+app.all('/', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    next();
+   });
 app.use('/public',express.static(path.join(__dirname,'public')))
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'home.html'));
