@@ -19,4 +19,4 @@ io.on('connection', (socket) => {
         socket.broadcast.emit('vitriread', msg);
     })
 });
-http.listen(process.env.PORT||3000, () => {});
+http.listen(process.env.PORT||3001, () => {});
