@@ -1,9 +1,6 @@
 const CarModel = require("./model");
 const path = require("path")
 const fs = require("fs")
-var image = function (req, res, next) {
-  res.json(req.file.filename);
-}
 var getall = function(req,res){
   CarModel.find({})
   .then(data=>{
@@ -27,4 +24,4 @@ var delimage = function(req,res){
   name = req.params.name
   fs.unlink("./public/"+name,function(){})
 }
-module.exports = {image,getall,rename,delimage};
+module.exports = {getall,rename,delimage};

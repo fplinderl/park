@@ -25,7 +25,7 @@ $.ajax({
       if (data.length > 0) { for (const ele of data) { 
         $("#list").append(`<li>
       <div class="ele">
-        <img src="/public/123456" alt="" /><span>${ele.rfid}</span
+        <img src="/public/${ele.image}" alt="" /><span>${ele.rfid}</span
         ><span>${ele.carPlate}</span><span>${ele.carIn.slice(16, 24)}</span><span>${ele.carIn.slice(0, 15)}</span>
       </div>
     </li>`) } }

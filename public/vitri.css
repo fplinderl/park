@@ -1,0 +1,34 @@
+.head {
+    width: 100vw;
+    background-color: black;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.head a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.head a:hover {
+    text-decoration: underline;
+}
+
+.bai table tr td {
+    font-size: 90px;
+    font-weight: bold;
+    border: 5px solid black;
+    padding: 7vh 7vw;
+}
+.bai {
+    display: flex;
+    justify-content: space-around;
+}
+p{
+    font-size: 90px;
+    text-align: center;
+}

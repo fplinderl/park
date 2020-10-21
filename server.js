@@ -4,7 +4,7 @@ const path = require("path")
 const control = require("./control");
 const multer = require("multer");
 const bodyParser = require("body-parser");
-var app = require('express')();
+var app = express();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 const upload = multer({ dest: "public" });
@@ -19,9 +19,14 @@ app.use(function (req, res, next) {
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'home.html'));
 });
+app.get('/vitri', (req, res) => {
+    res.sendFile(path.join(__dirname, 'vitri.html'));
+});
 app.get('/api/getall', control.getall)
+app.post("/api/uploadimage", upload.single("file"), function (req, res, next) {
+    res.json(req.file.filename);
+  });
 app.put('/api/rename', urlencodedParser, control.rename)
-app.post("/api/uploadimage", urlencodedParser, upload.single("file"), control.image);
 app.delete("/api/delimage/:name", function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
