@@ -10,20 +10,23 @@ var io = require('socket.io')(http);
 const upload = multer({ dest: "public" });
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.use('/public', express.static(path.join(__dirname, 'public')))
+app.use(function (req, res, next) {
+    res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    next();
+});
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'home.html'));
 });
 app.get('/api/getall', control.getall)
-app.post('/api/rename', function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+app.put('/api/rename', urlencodedParser, control.rename)
+app.post("/api/uploadimage", urlencodedParser, upload.single("file"), control.image);
+app.delete("/api/delimage/:name", function (req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
-}, urlencodedParser, control.rename)
-app.post("/api/uploadimage", urlencodedParser, function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    next();
-}, upload.single("file"), control.image);
+}, control.delimage)
 io.on('connection', (socket) => {
     io.emit('connected', { "msg": "connected" });
     socket.on('vitri', msg => {

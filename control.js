@@ -23,4 +23,8 @@ var rename=function(req,res){
   });
   res.json(req.file);
 }
-module.exports = {image,getall,rename};
+var delimage = function(req,res){
+  name = req.params.name
+  fs.unlink("./public/"+name,function(){})
+}
+module.exports = {image,getall,rename,delimage};

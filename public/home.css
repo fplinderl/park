@@ -19,3 +19,15 @@
 p{
     font-size: 50px;
 }
+ul{
+    list-style: none;
+}
+ul li{
+    margin-bottom: 10px;
+}
+li .ele{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
