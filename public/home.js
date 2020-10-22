@@ -25,9 +25,10 @@ $.ajax({
         <div class="ele">
           <img src="/public/${ele.image}" alt=":))))" />
           <div class="text">
-            <p>ma the: ${ele.rfid}</p>
-          <p>bien so xe: ${ele.carPlate}</p>
-          <p>thoi gian vao : ${ele.carIn.slice(16, 24)} ${ele.carIn.slice(0, 15)}</p>
+            <p>Mã thẻ: ${ele.rfid}</p>
+          <p>Biển số xe: ${ele.carPlate}</p>
+          <p>Vào bến lúc : ${ele.carIn.slice(16, 24)}</p>
+          <p>Ngày : ${ele.carIn.slice(0, 15)}</p>
           </div>
         </div>
       </li>`) } }
