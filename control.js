@@ -12,7 +12,7 @@ var getall = function(req,res){
 }
 var rename=function(req,res){
   oldname=req.body.oldname
-  newname=req.body.newname
+  newname=req.body.newname+".jpg"
   var oldname = path.join(__dirname, "./public/" + oldname);
   var newname = path.join(__dirname, "./public/" + newname);
   fs.rename(oldname, newname, (err) => {
@@ -21,7 +21,7 @@ var rename=function(req,res){
   res.json(req.file);
 }
 var delimage = function(req,res){
-  name = req.params.name+".jpg"
+  name = req.params.name
   fs.unlink("./public/"+name,function(){})
 }
 module.exports = {getall,rename,delimage};
