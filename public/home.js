@@ -20,7 +20,7 @@ $.ajax({
 })
   .then(data => {
     if (data != "loi getall roi") {
-      if(data.length ==4){
+      if(data.length ==3){
         $("#list").append("Bãi đã hết chỗ trống")
       }
       if (data.length > 0) { for (const ele of data) { 
