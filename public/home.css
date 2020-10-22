@@ -22,7 +22,7 @@ ul{
     font-size: 30px;
 }
 ul li{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 li .ele{
     display: flex;
@@ -34,6 +34,7 @@ li .ele{
     text-align: left;
 }
 .ele img{
-    width: 222px;
-    height: 222px;
+    width: 300px;
+    height: 300px;
+    margin-right: 2vw;
 }
