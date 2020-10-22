@@ -1,5 +1,5 @@
 $(function () {
-  var socket = io("http://loctoannam.herokuapp.com/")
+  var socket = io("https://loctoannam.herokuapp.com/")
   socket.on('connected', (msg) => {
     console.log(msg.msg)
   });
