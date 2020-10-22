@@ -9,7 +9,7 @@ var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 const upload = multer({ dest: "public" });
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
-var plate={message:"1111"}
+var plate={message:"2222"}
 app.use('/public', express.static(path.join(__dirname, 'public')))
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
