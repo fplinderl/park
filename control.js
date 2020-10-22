@@ -21,7 +21,7 @@ var rename=function(req,res){
   res.json(req.file);
 }
 var delimage = function(req,res){
-  name = req.params.name
+  name = req.params.name+".jpg"
   fs.unlink("./public/"+name,function(){})
 }
 module.exports = {getall,rename,delimage};

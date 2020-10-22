@@ -26,7 +26,7 @@ $.ajax({
       if (data.length > 0) { for (const ele of data) { 
         $("#list").append(`<li>
         <div class="ele">
-          <img src="/public/${ele.image}" alt=":))))" />
+          <img src="/public/${ele.image}.jpg" alt=":))))" />
           <div class="text">
             <p>Mã thẻ: ${ele.rfid}</p>
           <p>Biển số xe: ${ele.carPlate}</p>
