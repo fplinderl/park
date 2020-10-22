@@ -1,10 +1,8 @@
 $(function () {
   var socket = io("https://loctoannam.herokuapp.com/")
   socket.on('connected', (msg) => {
-    console.log(msg.msg)
   });
   socket.on('vitriread', (msg) => {
-    console.log(msg)
     for (var i = 0; i < msg.message.length; i++) {
       var a = "#p" + (i + 1)
       if (msg.message.charAt(i) == 0) {
@@ -24,13 +22,17 @@ $.ajax({
     if (data != "loi getall roi") {
       if (data.length > 0) { for (const ele of data) { 
         $("#list").append(`<li>
-      <div class="ele">
-        <img src="/public/${ele.image}" alt="" /><span>${ele.rfid}</span
-        ><span>${ele.carPlate}</span><span>${ele.carIn.slice(16, 24)}</span><span>${ele.carIn.slice(0, 15)}</span>
-      </div>
-    </li>`) } }
+        <div class="ele">
+          <img src="/public/${ele.image}" alt=":))))" />
+          <div class="text">
+            <p>ma the: ${ele.rfid}</p>
+          <p>bien so xe: ${ele.carPlate}</p>
+          <p>thoi gian vao : ${ele.carIn.slice(16, 24)} ${ele.carIn.slice(0, 15)}</p>
+          </div>
+        </div>
+      </li>`) } }
       else{
-        $("#list").html('khong co xe')
+        $("#list").html('Bãi không có xe')
       }
     }
   })

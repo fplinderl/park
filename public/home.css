@@ -16,18 +16,24 @@
 .head a:hover{
     text-decoration: underline;
 }
-p{
-    font-size: 50px;
-}
 ul{
     list-style: none;
+    text-align: center;
+    font-size: 30px;
 }
 ul li{
     margin-bottom: 10px;
 }
 li .ele{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 30px !important;
+}
+.ele .text{
+    text-align: left;
+}
+.ele img{
+    width: 222px;
+    height: 222px;
 }
