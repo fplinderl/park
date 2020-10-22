@@ -9,6 +9,7 @@ var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 const upload = multer({ dest: "public" });
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
+var plate={message:"1111"}
 app.use('/public', express.static(path.join(__dirname, 'public')))
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
@@ -34,8 +35,10 @@ app.delete("/api/delimage/:name", function (req, res, next) {
 }, control.delimage)
 io.on('connection', (socket) => {
     io.emit('connected', { "msg": "connected" });
+    io.emit('vitriread', plate)
     socket.on('vitri', msg => {
         socket.broadcast.emit('vitriread', msg);
+        return plate = msg
     })
 });
 http.listen(process.env.PORT || 3001, () => { });

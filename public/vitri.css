@@ -1,3 +1,7 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
 .head {
     width: 100vw;
     background-color: black;
@@ -12,17 +16,20 @@
     color: white;
     font-size: 30px;
     font-weight: 900;
+    padding: 10px 10px;
 }
 
 .head a:hover {
-    text-decoration: underline;
+    background: grey;
 }
 
 .bai table tr td {
-    font-size: 90px;
+    font-size: 135px;
     font-weight: bold;
     border: 5px solid black;
-    padding: 7vh 7vw;
+    height: 250px;
+    width: 250px;
+    text-align: center;
 }
 .bai {
     display: flex;
@@ -31,4 +38,9 @@
 p{
     font-size: 90px;
     text-align: center;
+    margin:30px 0px;
+}
+tr td p{
+    font-size: 30px;
+    margin: 0px 0px;
 }
