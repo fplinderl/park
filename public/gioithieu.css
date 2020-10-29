@@ -1,0 +1,134 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.head {
+    width: 100vw;
+    background-color: black;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.head a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.head a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    background-image: url(http://ajaps.co.kr/assets/web/images/web_1920_dark.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.content #tieude {
+    color: white;
+    padding-top: 25vh;
+    padding-left: 35vh;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.content p {
+    color: white;
+    padding-top: 3vh;
+    padding-left: 35vh;
+    padding-right: 35vh;
+    font-size: 30px;
+}
+
+.content #button button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.linhkien a:hover {
+    text-decoration: underline;
+}
+
+.linhkien a {
+    color: rgb(248, 244, 6);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1050px) {
+    * {
+        margin: 0px;
+        box-sizing: border-box;
+        padding: 0px;
+
+    }
+
+    .head {
+        width: 100%;
+        background-color: black;
+        height: 8vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .head a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    .head a:hover {
+        text-decoration: underline;
+    }
+
+    .content {
+        background-image: url(http://ajaps.co.kr/assets/web/images/web_1920_dark.jpg);
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 92vh;
+    }
+
+    .content #tieude {
+        color: white;
+        padding-top: 15vh;
+        padding-left: 5vh;
+        font-size: 30px;
+        font-weight: bold;
+        padding-right: 0px;
+    }
+
+    .content p {
+        color: white;
+        padding-top: 3vh;
+        padding-left: 5vh;
+        padding-right: 5vh;
+        font-size: 20px;
+    }
+
+    .content #button button {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+
+    .linhkien a:hover {
+        text-decoration: underline;
+    }
+
+    .linhkien a {
+        color: rgb(248, 244, 6);
+        text-decoration: none;
+    }
+}

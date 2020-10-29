@@ -18,6 +18,9 @@ app.use(function (req, res, next) {
     next();
 });
 app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'gioithieu.html'));
+});
+app.get('/dmlam', (req, res) => {
     res.sendFile(path.join(__dirname, 'home.html'));
 });
 app.get('/vitri', (req, res) => {
