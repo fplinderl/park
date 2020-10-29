@@ -1,12 +1,12 @@
 var doitrang = function (x) {
 if(x===1){
-    $('.content').css('background-image','url(http://ajaps.co.kr/assets/web/images/web_1920_dark.jpg)')
+    $('.content').css('background','linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(https://giaphaco.com/wp-content/uploads/2020/04/multi-storey-car-park.jpg)')
     $('#tieude').html(`Đổi mới công nghệ thông minh và định hướng tương lai`)
     $('#gioithieu').html(`Hệ thống đỗ xe tự động IoT hướng tới tương lai hạnh phúc cho tất cả mọi
     người dựa trên tư duy công nghệ về con người và bảo vệ môi trường.`)
 }
 if(x===2){
-    $('.content').css('background-image','url(http://ajaps.co.kr/assets/web/images/Main_img_02.png)')
+    $('.content').css('background','linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(https://lh3.googleusercontent.com/proxy/QAexwIkyz66RNqnYhVt3KyJ48UYnJaJHKjjTMF-yupLWD48yPcfjE0fCRMNzIXkNdsMPzgGHW3Iuf4MvYAGEUkW0x9OxJwSau5eIVcY-naAQJuelo16CsnllNP-kbNfOzsg)')
     $('#tieude').html(`Công nghệ RFID`)
     $('#gioithieu').html(`Radio Frequency Identification - Công nghệ nhận dạng đối tượng bằng sóng vô tuyến. Đối với thẻ 32bit có thể chứa tới 4 tỷ mã số. Khi sản xuất, mỗi một thẻ chip RFID sẽ được gắn 1 mã số hoàn toàn khác nhau. Điều này sẽ giúp cho RFID mang lại độ an toàn, tính bảo mật cao`)
 }

@@ -24,10 +24,10 @@
 }
 
 .content {
-    background-image: url(http://ajaps.co.kr/assets/web/images/web_1920_dark.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://giaphaco.com/wp-content/uploads/2020/04/multi-storey-car-park.jpg);
     background-position: 50% 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
     width: 100vw;
     height: 100vh;
 }
@@ -92,7 +92,7 @@
     }
 
     .content {
-        background-image: url(http://ajaps.co.kr/assets/web/images/web_1920_dark.jpg);
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://giaphaco.com/wp-content/uploads/2020/04/multi-storey-car-park.jpg);
         background-position: 50% 50%;
         background-size: cover;
         background-repeat: no-repeat;
