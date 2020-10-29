@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     box-sizing: border-box;
+    padding: 0px;
 }
 .head {
     width: 100vw;
@@ -38,7 +39,49 @@ li .ele{
     text-align: left;
 }
 .ele img{
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     margin-right: 2vw;
+    background-color: gray;
+}
+@media only screen and (max-width: 1050px) {
+    *{
+        margin: 0px;
+        box-sizing: border-box;
+        padding: 0px;
+    }
+    .head {
+        width: 100%;
+        background-color: black;
+        height: 8vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .head a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: 900;
+    }
+    ul{
+        list-style: none;
+        text-align: center;
+        font-size: 30px;
+    }
+    ul li{
+        margin-bottom: 10px;
+    }
+    li .ele{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px !important;
+    }
+    .ele img{
+        width: 200px;
+        height: 200px;
+        margin-right: 2vw;
+        background-color: gray;
+    }
 }

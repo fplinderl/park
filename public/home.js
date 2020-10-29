@@ -26,12 +26,12 @@ $.ajax({
       if (data.length > 0) { for (const ele of data) { 
         $("#list").append(`<li>
         <div class="ele">
-          <img src="/public/${ele.image}.jpg" alt=":))))" />
+          <img src="/public/${ele.image}.jpg" alt="ảnh đã bị server xóa" />
           <div class="text">
-            <p>Mã thẻ: ${ele.rfid}</p>
-          <p>Biển số xe: ${ele.carPlate}</p>
-          <p>Vào bến lúc : ${ele.carIn.slice(16, 24)}</p>
-          <p>Ngày : ${ele.carIn.slice(0, 15)}</p>
+            <p>Mã thẻ: <span>${ele.rfid}</span></p>
+          <p>Biển số xe: <span>${ele.carPlate}</span></p>
+          <p>Vào bến lúc : <span>${ele.carIn.slice(16, 24)}</span></p>
+          <p>Ngày : <span>${ele.carIn.slice(0, 15)}</span></p>
           </div>
         </div>
       </li>`) } }

@@ -29,7 +29,7 @@
     background-size: cover !important;
     background-repeat: no-repeat !important;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
 }
 
 .content #tieude {
@@ -51,6 +51,7 @@
 .content #button button {
     width: 20px;
     height: 20px;
+    border-radius: 0%;
 }
 
 .linhkien a:hover {
@@ -119,6 +120,7 @@
     .content #button button {
         width: 20px;
         height: 20px;
+        border-radius: 0%;
     }
 
     .linhkien a:hover {
