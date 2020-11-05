@@ -24,17 +24,21 @@ $.ajax({
         alert("Bãi đã hết chỗ trống")
       }
       if (data.length > 0) { for (const ele of data) { 
-        $("#list").append(`<li>
-        <div class="ele">
-          <img src="/public/${ele.image}.jpg" alt="ảnh đã bị server xóa" />
-          <div class="text">
-            <p>Mã thẻ: <span>${ele.rfid}</span></p>
-          <p>Biển số xe: <span>${ele.carPlate}</span></p>
-          <p>Vào bến lúc : <span>${ele.carIn.slice(16, 24)}</span></p>
-          <p>Ngày : <span>${ele.carIn.slice(0, 15)}</span></p>
-          </div>
-        </div>
-      </li>`) } }
+        $("#list").append(`
+      <div class="card mb-3 col-6" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="/public/${ele.image}.jpg" class="card-img" alt="ảnh đã bị server xóa">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">${ele.carIn.slice(0, 15)}</h5>
+        <p class="card-text">Biển số xe: <span>${ele.carPlate}</span><p>Vào bến lúc : <span>${ele.carIn.slice(16, 24)}</span></p></p>
+        <p class="card-text"><small class="text-muted">${ele.rfid}</small></p>
+      </div>
+    </div>
+  </div>
+</div>`) } }
       else{
         $("#list").html('Bãi không có xe')
       }
