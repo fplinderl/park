@@ -20,7 +20,8 @@
 }
 
 .head a:hover {
-    background: grey;
+    background: rgb(82, 82, 82);
+    border-radius: 10px;
 }
 
 .bai table tr td {

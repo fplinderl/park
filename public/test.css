@@ -17,9 +17,12 @@
     color: white;
     font-size: 30px;
     font-weight: 900;
+    padding: 10px 10px;
 }
-.head a:hover{
-    text-decoration: underline;
+
+.head a:hover {
+    background: rgb(82, 82, 82);
+    border-radius: 10px;
 }
 #carouselExampleCaptions .carousel-inner img {
     height: 90vh !important;
