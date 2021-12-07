@@ -1,6 +1,7 @@
 $(function () {
   var socket = io("https://loctoannam.herokuapp.com/")
   socket.on('connected', (msg) => {
+    console.log(11111111111111111111111)
   });
   socket.on('vitriread', (msg) => {
     for (var i = 0; i < msg.message.length; i++) {
