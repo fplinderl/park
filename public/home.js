@@ -15,8 +15,12 @@ $(function () {
   });
   function sendTime() {
     console.log(1)
-    io.sockets.emit("atime", { time: new Date().toJSON() });
+    socket.emit("atime", { time: new Date().toJSON() });
   }
+  $("#button").click(function() {
+    console.log(1)
+    socket.emit('arduino' ,"Hello World!");
+})
 });
 $.ajax({
   url: "/api/getall",
