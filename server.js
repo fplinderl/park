@@ -48,7 +48,7 @@ io.on("connection", (socket) => {
     return (plate = msg);
   });
   socket.on("arduino", function (data) {
-    io.sockets.emit("arduino", { message: "R0" });
+    io.sockets.emit('atime', { time: new Date().toJSON() });
   });
 });
 http.listen(process.env.PORT || 3001, () => {});
